@@ -1,0 +1,70 @@
+/* ログイン画面 */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.text-center {
+    text-align: center; /* Centers the text horizontally */
+    margin: 60px 0; /* Adjusts top and bottom margin */
+    width: 100%; /* Ensures full width within its container */
+  }
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container {
+    background-color: #e0e0e0;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+    border: 2px solid #47617c;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-container input[type="submit"] {
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #bbb;
+}
