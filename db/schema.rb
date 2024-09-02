@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_02_121120) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_02_142311) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "shop_tags", force: :cascade do |t|
+    t.bigint "shop_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_shop_tags_on_shop_id"
+    t.index ["tag_id"], name: "index_shop_tags_on_tag_id"
+  end
 
   create_table "shops", force: :cascade do |t|
     t.string "name"
@@ -24,4 +33,13 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_02_121120) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "shop_tags", "shops"
+  add_foreign_key "shop_tags", "tags"
 end

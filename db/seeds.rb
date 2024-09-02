@@ -15,3 +15,8 @@ Shop.create!(
   holiday: "水曜日",                        # 定休日
   url: "https://example.com"                # URL
 )
+
+Tag.create([
+  { name: 'テイクアウト' },
+  { name: 'イートイン' }
+])
