@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Shop.create!(
+  name: "サンプルショップ",                   # 店舗名
+  address: "東京都渋谷区道玄坂1-2-3",       # 住所
+  opening_time: "10:00",                    # 開店時間
+  closing_time: "22:00",                    # 閉店時間
+  holiday: "水曜日",                        # 定休日
+  url: "https://example.com"                # URL
+)
