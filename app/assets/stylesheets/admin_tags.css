@@ -1,0 +1,34 @@
+.container {
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  
+  .tag-form, .tag-list {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .tag-item {
+    padding: 10px 0;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group .btn {
+    margin-left: 10px; /* 入力欄とボタンの間に隙間を作る */
+  }
+
+  .text-center {
+    margin: 60px 0; /* Adjusts top and bottom margin */
+    width: 100%; /* Ensures full width within its container */
+  }
+
+  .top-button-container {
+    position: absolute; /* 絶対配置 */
+    top: 20px; /* 上からの距離 */
+    right: 20px; /* 右からの距離 */
+  }
