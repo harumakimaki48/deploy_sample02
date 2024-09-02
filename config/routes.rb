@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     delete "logout", to: "sessions#destroy"
 
     # その他の管理者用リソースを追加
-    resources :sessions, only: [:new, :create, :destroy] # 重複回避
+    resources :sessions, only: [ :new, :create, :destroy ] # 重複回避
     resources :shops
     resources :tags
   end
@@ -28,8 +28,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # 一般ユーザー向けのリソースルート
-  resources :shops, only: [:index, :new, :create, :destroy, :show]
-  resources :tags, only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :admins, only: [:new, :create]
+  resources :shops, only: [ :index, :new, :create, :destroy, :show ]
+  resources :tags, only: [ :index, :new, :create, :edit, :update, :destroy ]
+  resources :admins, only: [ :new, :create ]
 end
-
