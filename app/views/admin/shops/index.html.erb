@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>店舗情報編集一覧</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<%= stylesheet_link_tag 'custom' %>
+</head>
+
+<body>
+<h2 class="text-center my-4">店舗情報編集一覧</h2>
+<div class="top-button-container">
+    <%= link_to 'TOP', admin_dashboard_index_path, class: 'btn btn-info float-right' %>
+</div>
+
+<div class="container">
+<div id="search-results" class="row">
+  <%= render partial: 'shop_list', locals: { shops: @shops } %>
+</div>
+</div>
+</div>
+</body>
+
+</html>

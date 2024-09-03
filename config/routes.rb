@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "admin_dashboard/index"
   # ログイン関連のルート（一般ユーザー向け）
   get "login", to: "admin_sessions#new", as: "login"
   post "login", to: "admin_sessions#create"
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
     delete "logout", to: "sessions#destroy"
 
     # その他の管理者用リソースを追加
-    resources :sessions, only: [ :new, :create, :destroy ] # 重複回避
+    resources :admin_sessions, only: [ :new, :create, :destroy ] # 重複回避
     resources :shops
     resources :tags
   end
@@ -31,4 +32,5 @@ Rails.application.routes.draw do
   resources :shops, only: [ :index, :new, :create, :destroy, :show ]
   resources :tags, only: [ :index, :new, :create, :edit, :update, :destroy ]
   resources :admins, only: [ :new, :create ]
+  resources :admin_sessions, only: [ :new, :create, :destroy ]
 end

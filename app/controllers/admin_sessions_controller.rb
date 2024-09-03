@@ -5,10 +5,10 @@ class AdminSessionsController < ApplicationController
   def create
     @admin = login(params[:email], params[:password].strip)
     if @admin
-      redirect_back_or_to admin_dashboard_index_path, notice: "Logged in successfully"
+      redirect_to admin_dashboard_index_path, notice: "Logged in successfully"
     else
       flash.now[:alert] = "Login failed"
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

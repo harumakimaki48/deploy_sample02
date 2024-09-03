@@ -1,5 +1,5 @@
 class Shop < ApplicationRecord
-    has_many :shop_tags
+  has_many :shop_tags, dependent: :destroy
   has_many :tags, through: :shop_tags
 
     def self.ransackable_attributes(auth_object = nil)
