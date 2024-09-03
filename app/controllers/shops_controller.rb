@@ -1,7 +1,7 @@
 class ShopsController < ApplicationController
   def index
     @q = Shop.ransack(params[:q])
-    @shops = @q.result(distinct: true)
+    @shops = @q.result(distinct: true).order(:name)
 
     if params[:q] && params[:q][:tags_id_eq].present?
         @shops = @shops.joins(:tags).where(tags: { id: params[:q][:tags_id_eq] })

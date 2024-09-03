@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理者TOP画面</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'sessions', media: 'all' %>
+  </head>
+<body>
+<h2 class="text-center">管理者TOP画面</h2>
+  <div class="container">
+    <div class="list-group">
+      <%= link_to '店舗情報編集一覧', admin_shops_path, class: 'list-group-item list-group-item-action' %>
+      <%= link_to '店舗情報登録', new_admin_shop_path, class: 'list-group-item list-group-item-action' %>
+      <%= link_to 'タグ編集', admin_tags_path, class: 'list-group-item list-group-item-action' %>
+    </div>
+  </div>
+</body>
+</html>
